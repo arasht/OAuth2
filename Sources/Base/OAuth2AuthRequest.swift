@@ -100,7 +100,7 @@ public class OAuth2AuthRequest {
 //		guard let components = comp where "https" == components.scheme else {
 //			throw OAuth2Error.NotUsingTLS
 //		}
-        let components = comp
+        let components = comp!
 		if .GET == method && params.count > 0 {
 			components.percentEncodedQuery = params.percentEncodedQueryString()
 		}
